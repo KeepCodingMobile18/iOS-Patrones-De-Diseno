@@ -43,4 +43,24 @@ final class LoginUseCaseTests: XCTestCase {
         waitForExpectations(timeout: 5)
         XCTAssertEqual(dataSource.session, data)
     }
+    
+    func testFailureDoesNotStoreToken() {
+        let dataSource = DummySessionDataSource()
+        let sut = LoginUseCase(dataSource: dataSource)
+        
+        let expectation = self.expectation(description: "TestFailure")
+        APISession.shared = APISessionMock { _ in .failure(APIErrorResponse.network("login-fail")) }
+        
+        sut.execute(credentials: Credentials(username: "a@b.es", password: "122345")) { result in
+            guard case .failure = result else {
+                return
+            }
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 5)
+        XCTAssertNil(dataSource.session)
+    }
+    
+    
 }
