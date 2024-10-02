@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="SWPatterns" customModuleProvider="target">
+            <connections>
+                <outlet property="errorContainer" destination="VfS-JO-DoK" id="wuG-pO-fOA"/>
+                <outlet property="errorLabel" destination="1m5-CF-Ulf" id="NpB-zx-vAd"/>
+                <outlet property="spinner" destination="zxT-aB-zP4" id="Dyh-g1-p9l"/>
+                <outlet property="tableView" destination="DVv-29-5kI" id="C3Q-Ya-55a"/>
+                <outlet property="view" destination="iN0-l3-epB" id="xn9-DK-XCS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DVv-29-5kI">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="zxT-aB-zP4">
+                    <rect key="frame" x="186.66666666666666" y="428.66666666666669" width="20" height="20"/>
+                </activityIndicatorView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VfS-JO-DoK">
+                    <rect key="frame" x="24" y="411.33333333333331" width="345" height="54.666666666666686"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1m5-CF-Ulf">
+                            <rect key="frame" x="0.0" y="0.0" width="345" height="20.333333333333332"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vw0-Mg-E3A">
+                            <rect key="frame" x="0.0" y="20.333333333333375" width="345" height="34.333333333333343"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            <connections>
+                                <action selector="onRetryTapped:" destination="-1" eventType="touchUpInside" id="d53-EK-qh6"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="DVv-29-5kI" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="0IT-uw-8OC"/>
+                <constraint firstItem="VfS-JO-DoK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="0wy-ih-llC"/>
+                <constraint firstItem="VfS-JO-DoK" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="GAk-aI-aJl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="DVv-29-5kI" secondAttribute="trailing" id="OqL-JS-aVH"/>
+                <constraint firstItem="zxT-aB-zP4" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="SpG-QH-lyh"/>
+                <constraint firstItem="VfS-JO-DoK" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="fnm-2e-QZA"/>
+                <constraint firstItem="zxT-aB-zP4" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="l7m-OR-T2A"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="DVv-29-5kI" secondAttribute="bottom" id="zg9-7d-MgQ"/>
+                <constraint firstItem="DVv-29-5kI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="zmO-n4-a83"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="10"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
