@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeroCell" rowHeight="90" id="dbd-n5-toV" customClass="HeroCell" customModule="PatternMVVM" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dbd-n5-toV" id="QRb-1c-MGW">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gVv-5b-XPb" customClass="AsyncImage" customModule="PatternMVVM" customModuleProvider="target">
+                        <rect key="frame" x="12" y="12" width="66" height="66"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="gVv-5b-XPb" secondAttribute="height" id="o7a-5Z-3uU"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUi-P7-pgn">
+                        <rect key="frame" x="93.999999999999986" y="32" width="242.66666666666663" height="26.333333333333329"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="337-T1-os4">
+                        <rect key="frame" x="360.66666666666669" y="37" width="20.333333333333314" height="16.666666666666664"/>
+                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="337-T1-os4" secondAttribute="height" id="x5q-by-0Xp"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="nUi-P7-pgn" firstAttribute="centerY" secondItem="gVv-5b-XPb" secondAttribute="centerY" id="32c-47-Otl"/>
+                    <constraint firstItem="337-T1-os4" firstAttribute="leading" secondItem="nUi-P7-pgn" secondAttribute="trailing" constant="24" id="8Cc-EF-Uf7"/>
+                    <constraint firstItem="nUi-P7-pgn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="QRb-1c-MGW" secondAttribute="top" constant="12" id="94x-mn-CTz"/>
+                    <constraint firstItem="gVv-5b-XPb" firstAttribute="leading" secondItem="QRb-1c-MGW" secondAttribute="leading" constant="12" id="F42-pz-nNY"/>
+                    <constraint firstItem="gVv-5b-XPb" firstAttribute="centerY" secondItem="QRb-1c-MGW" secondAttribute="centerY" id="HRr-z4-3z6"/>
+                    <constraint firstItem="nUi-P7-pgn" firstAttribute="leading" secondItem="gVv-5b-XPb" secondAttribute="trailing" constant="16" id="Mw6-Ac-VcX"/>
+                    <constraint firstAttribute="trailing" secondItem="337-T1-os4" secondAttribute="trailing" constant="12" id="TXO-ZA-qgS"/>
+                    <constraint firstItem="337-T1-os4" firstAttribute="centerY" secondItem="gVv-5b-XPb" secondAttribute="centerY" id="ZDQ-ft-jWr"/>
+                    <constraint firstItem="gVv-5b-XPb" firstAttribute="top" secondItem="QRb-1c-MGW" secondAttribute="top" constant="12" id="hd4-d4-aFg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarView" destination="gVv-5b-XPb" id="rP6-G6-Aqz"/>
+                <outlet property="titleLabel" destination="nUi-P7-pgn" id="eSd-YJ-uUX"/>
+            </connections>
+            <point key="canvasLocation" x="130.53435114503816" y="21.83098591549296"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
+    </resources>
+</document>

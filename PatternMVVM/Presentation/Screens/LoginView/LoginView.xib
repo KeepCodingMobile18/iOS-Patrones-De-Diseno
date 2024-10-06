@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="PatternMVVM" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="XsJ-pe-d1l" id="2ZY-3d-BZ5"/>
+                <outlet property="errorText" destination="Y6d-9S-fWU" id="YxI-Dz-sVv"/>
+                <outlet property="passwordForm" destination="8UH-KK-3Cf" id="EfM-c1-4QG"/>
+                <outlet property="signInButton" destination="XkG-Fv-Maq" id="j1K-ga-gla"/>
+                <outlet property="usernameForm" destination="vxI-bE-ZrQ" id="VC6-p3-gio"/>
+                <outlet property="view" destination="iN0-l3-epB" id="k80-Wb-rzX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo3" translatesAutoresizingMaskIntoConstraints="NO" id="CWS-JE-nrJ">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xro-KQ-LZD">
+                    <rect key="frame" x="14.666666666666657" y="299.33333333333331" width="364" height="253.66666666666669"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="psq-03-7Im">
+                    <rect key="frame" x="26.666666666666657" y="323.33333333333331" width="340" height="205.66666666666669"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vxI-bE-ZrQ">
+                            <rect key="frame" x="0.0" y="0.0" width="340" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8UH-KK-3Cf">
+                            <rect key="frame" x="0.0" y="50" width="340" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6d-9S-fWU">
+                            <rect key="frame" x="0.0" y="100" width="340" height="19.333333333333329"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                            <color key="textColor" systemColor="systemRedColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="XsJ-pe-d1l">
+                            <rect key="frame" x="0.0" y="135.33333333333337" width="340" height="20"/>
+                        </activityIndicatorView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkG-Fv-Maq">
+                            <rect key="frame" x="0.0" y="171.33333333333337" width="340" height="34.333333333333343"/>
+                            <color key="tintColor" systemColor="systemOrangeColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Sign in"/>
+                            <connections>
+                                <action selector="onSignInTapped:" destination="-1" eventType="touchUpInside" id="oGR-Xc-zeE"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="340" id="EMy-yw-MCK"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="CWS-JE-nrJ" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="2hZ-ac-DN3"/>
+                <constraint firstItem="CWS-JE-nrJ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Diq-es-QBa"/>
+                <constraint firstItem="xro-KQ-LZD" firstAttribute="centerY" secondItem="psq-03-7Im" secondAttribute="centerY" id="I32-y7-rgl"/>
+                <constraint firstItem="xro-KQ-LZD" firstAttribute="centerX" secondItem="psq-03-7Im" secondAttribute="centerX" id="JVw-Qc-X4I"/>
+                <constraint firstItem="xro-KQ-LZD" firstAttribute="leading" secondItem="psq-03-7Im" secondAttribute="leading" constant="-12" id="Laq-5w-Wz3"/>
+                <constraint firstItem="CWS-JE-nrJ" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="PRe-by-aFl"/>
+                <constraint firstItem="CWS-JE-nrJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="VQL-Qn-G5a"/>
+                <constraint firstItem="xro-KQ-LZD" firstAttribute="top" secondItem="psq-03-7Im" secondAttribute="top" constant="-24" id="Vay-ZU-z0m"/>
+                <constraint firstItem="psq-03-7Im" firstAttribute="centerX" secondItem="CWS-JE-nrJ" secondAttribute="centerX" id="bHV-dO-XFj"/>
+                <constraint firstItem="psq-03-7Im" firstAttribute="leading" secondItem="CWS-JE-nrJ" secondAttribute="leading" priority="750" constant="24" id="oI3-X3-rCI"/>
+                <constraint firstItem="psq-03-7Im" firstAttribute="centerY" secondItem="CWS-JE-nrJ" secondAttribute="centerY" id="vQT-4L-Hh2"/>
+            </constraints>
+            <point key="canvasLocation" x="131" y="9"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="fondo3" width="1080" height="1920"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
